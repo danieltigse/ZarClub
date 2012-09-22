@@ -1,0 +1,5 @@
+#surefire
+#Mon Sep 10 07:31:28 ECT 2012
+user.dir=/home/developer/ZarPage
+localRepository=/home/developer/.m2/repository
+basedir=/home/developer/ZarPage

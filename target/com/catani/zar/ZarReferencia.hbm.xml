@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/08/2012 10:42:40 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.catani.zar.ZarReferencia" table="zar_referencia" catalog="zar">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="50" not-null="true" />
+        </property>
+        <property name="nombreEmpresa" type="string">
+            <column name="nombre_empresa" length="30" not-null="true" />
+        </property>
+        <property name="cargo" type="string">
+            <column name="cargo" length="30" not-null="true" />
+        </property>
+        <property name="telefonoFijo" type="string">
+            <column name="telefono_fijo" length="15" />
+        </property>
+        <property name="telefonoCelular" type="string">
+            <column name="telefono_celular" length="15" />
+        </property>
+        <property name="comentario" type="string">
+            <column name="comentario" length="150" />
+        </property>
+        <property name="idRelacion" type="int">
+            <column name="id_relacion" not-null="true" />
+        </property>
+        <property name="idCuenta" type="int">
+            <column name="id_cuenta" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

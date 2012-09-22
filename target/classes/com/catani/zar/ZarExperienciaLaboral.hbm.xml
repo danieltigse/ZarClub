@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18/08/2012 10:03:14 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.catani.zar.ZarExperienciaLaboral" table="zar_experiencia_laboral" >
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="nombreEmpresa" type="string">
+            <column name="nombre_empresa" length="30" not-null="true" />
+        </property>
+        <property name="cargo" type="string">
+            <column name="cargo" length="30" not-null="true" />
+        </property>
+        <property name="fechaInicio" type="date">
+            <column name="fecha_inicio" length="10" not-null="true" />
+        </property>
+        <property name="fechaSalida" type="date">
+            <column name="fecha_salida" length="10" />
+        </property>
+        <property name="descripcionFuncion" type="string">
+            <column name="descripcion_funcion" length="150" />
+        </property>
+        <property name="logros" type="string">
+            <column name="logros" length="200" />
+        </property>
+        <property name="idArea" type="int">
+            <column name="id_area" not-null="true" />
+        </property>
+        <property name="idSector" type="int">
+            <column name="id_sector" not-null="true" />
+        </property>
+        <property name="idCuenta" type="int">
+            <column name="id_cuenta" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

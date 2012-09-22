@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/08/2012 10:42:40 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.catani.zar.ZarInformacionAcademica" table="zar_informacion_academica" catalog="zar">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="tituloObtenido" type="string">
+            <column name="titulo_obtenido" length="50" not-null="true" />
+        </property>
+        <property name="pais" type="string">
+            <column name="pais" length="25" />
+        </property>
+        <property name="fechaInicio" type="date">
+            <column name="fecha_inicio" length="10" not-null="true" />
+        </property>
+        <property name="fechaFinalizacion" type="date">
+            <column name="fecha_finalizacion" length="10" />
+        </property>
+        <property name="promedio" type="string">
+            <column name="promedio" length="7" />
+        </property>
+        <property name="rango" type="string">
+            <column name="rango" length="15" />
+        </property>
+        <property name="materiasAprobadas" type="java.lang.Integer">
+            <column name="materias_aprobadas" />
+        </property>
+        <property name="cantidadMaterias" type="java.lang.Integer">
+            <column name="cantidad_materias" />
+        </property>
+        <property name="observacion" type="string">
+            <column name="observacion" length="150" />
+        </property>
+        <property name="idInstitucion" type="int">
+            <column name="id_institucion" not-null="true" />
+        </property>
+        <property name="idNivelEstudio" type="int">
+            <column name="id_nivel_estudio" not-null="true" />
+        </property>
+        <property name="idEstado" type="int">
+            <column name="id_estado" not-null="true" />
+        </property>
+        <property name="idCuenta" type="int">
+            <column name="id_cuenta" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

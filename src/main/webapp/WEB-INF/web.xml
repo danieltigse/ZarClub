@@ -1,0 +1,109 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+	<error-page>
+	    <error-code>404</error-code>
+	    <location>/error.jsp</location>
+	</error-page>
+	<error-page>
+	    <error-code>500</error-code>
+	    <location>/error.jsp</location>
+	</error-page>
+	<filter>
+	    <filter-name>ShiroFilter</filter-name>
+	    <filter-class>
+	        org.apache.shiro.web.servlet.IniShiroFilter
+	    </filter-class>
+	    <!-- no init-param means load the INI config
+	        from classpath:shiro.ini --> 
+	</filter>
+	<filter-mapping>
+	     <filter-name>ShiroFilter</filter-name>
+	     <url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+  <display-name>Archetype Created Web Application</display-name>
+  
+  <servlet>
+  	<description>Log in user using username and password provided</description>
+  	<display-name>LoginUser</display-name>
+  	<servlet-name>LoginUser</servlet-name>
+  	<servlet-class>com.catani.controlador.LoginUser</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<description>Logs user out</description>
+  	<display-name>LogoutUser</display-name>
+  	<servlet-name>LogoutUser</servlet-name>
+  	<servlet-class>com.catani.controlador.LogoutUser</servlet-class>
+  </servlet>
+  
+   <servlet>
+  	<description>Guarda un nuevo usuario</description>
+  	<display-name>GuardarUsuario</display-name>
+  	<servlet-name>GuardarUsuario</servlet-name>
+  	<servlet-class>com.catani.controlador.GuardarUsuario</servlet-class>
+  </servlet>
+  
+   <servlet>
+  	<description>Muestra el perfil completo de un usuario</description>
+  	<display-name>VerPerfil</display-name>
+  	<servlet-name>VerPerfil</servlet-name>
+  	<servlet-class>com.catani.controlador.VerPerfil</servlet-class>
+  </servlet>
+  
+   <servlet>
+  	<description>Muestra todos los usuarios</description>
+  	<display-name>VerTodos</display-name>
+  	<servlet-name>VerTodos</servlet-name>
+  	<servlet-class>com.catani.controlador.VerTodos</servlet-class>
+  </servlet>
+  
+    <servlet>
+  	<description>Llena los combos</description>
+  	<display-name>Combos</display-name>
+  	<servlet-name>Combos</servlet-name>
+  	<servlet-class>com.catani.controlador.Combos</servlet-class>
+  </servlet>
+  
+    <servlet>
+  	<description>Busqueda</description>
+  	<display-name>Busqueda</display-name>
+  	<servlet-name>Busqueda</servlet-name>
+  	<servlet-class>com.catani.controlador.Busqueda</servlet-class>
+  </servlet>
+   
+  <servlet-mapping>
+  	<servlet-name>LoginUser</servlet-name>
+  	<url-pattern>/LoginUser</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>LogoutUser</servlet-name>
+  	<url-pattern>/LogoutUser</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>GuardarUsuario</servlet-name>
+  	<url-pattern>/GuardarUsuario</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>VerPerfil</servlet-name>
+  	<url-pattern>/VerPerfil</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>VerTodos</servlet-name>
+  	<url-pattern>/VerTodos</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>Combos</servlet-name>
+  	<url-pattern>/Combos</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>Busqueda</servlet-name>
+  	<url-pattern>/Busqueda</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/08/2012 10:42:40 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.catani.zar.ZarDatosPersonales" table="zar_datos_personales" catalog="zar">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="foto" type="string">
+            <column name="foto" length="30" />
+        </property>
+        <property name="primerNombre" type="string">
+            <column name="primer_nombre" length="25" not-null="true" />
+        </property>
+        <property name="segundoNombre" type="string">
+            <column name="segundo_nombre" length="25" />
+        </property>
+        <property name="apellidoPaterno" type="string">
+            <column name="apellido_paterno" length="25" not-null="true" />
+        </property>
+        <property name="apellidoMaterno" type="string">
+            <column name="apellido_materno" length="25" />
+        </property>
+        <property name="sexo" type="boolean">
+            <column name="sexo" not-null="true" />
+        </property>
+        <property name="cedula" type="string">
+            <column name="cedula" length="10" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="80" not-null="true" />
+        </property>
+        <property name="fechaDeNacimiento" type="date">
+            <column name="fecha_de_nacimiento" length="10" not-null="true" />
+        </property>
+        <property name="nacionalidad" type="string">
+            <column name="nacionalidad" length="25" not-null="true" />
+        </property>
+        <property name="direccionDomicilio" type="string">
+            <column name="direccion_domicilio" length="150" />
+        </property>
+        <property name="discapacidad" type="java.lang.Boolean">
+            <column name="discapacidad" />
+        </property>
+        <property name="telefonoFijo" type="string">
+            <column name="telefono_fijo" length="15" />
+        </property>
+        <property name="movilizacionPropia" type="java.lang.Boolean">
+            <column name="movilizacion_propia" />
+        </property>
+        <property name="licencia" type="java.lang.Boolean">
+            <column name="licencia" />
+        </property>
+        <property name="salarioActual" type="java.lang.Float">
+            <column name="salario_actual" precision="12" scale="0" />
+        </property>
+        <property name="aspiracionSalarial" type="java.lang.Float">
+            <column name="aspiracion_salarial" precision="12" scale="0" />
+        </property>
+        <property name="idEstadoCivil" type="int">
+            <column name="id_estado_civil" not-null="true" />
+        </property>
+        <property name="idCiudadResidencia" type="int">
+            <column name="id_ciudad_residencia" not-null="true" />
+        </property>
+        <property name="idTipoDiscapacidad" type="java.lang.Integer">
+            <column name="id_tipo_discapacidad" />
+        </property>
+        <property name="idTipoLicencia" type="java.lang.Integer">
+            <column name="id_tipo_licencia" />
+        </property>
+    </class>
+</hibernate-mapping>
