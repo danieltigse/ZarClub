@@ -98,11 +98,11 @@
   </dependencies>
   
   <properties>
-      <jdbc.user>root</jdbc.user>
-      <jdbc.passwd>princesa123</jdbc.passwd>
+      <jdbc.user>dhgec</jdbc.user>
+      <jdbc.passwd>desarrol</jdbc.passwd>
       <jdbc.ds>com.mysql.jdbc.jdbc2.optional.MysqlDataSource</jdbc.ds>
-      <jdbc.serverName>localhost</jdbc.serverName>
-      <jdbc.databaseName>zar</jdbc.databaseName>
+      <jdbc.serverName>50.31.138.79</jdbc.serverName>
+      <jdbc.databaseName>dhgec_zarpage</jdbc.databaseName>
   </properties>
   
   <build>
